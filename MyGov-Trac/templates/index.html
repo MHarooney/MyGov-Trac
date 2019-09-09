@@ -1,0 +1,116 @@
+    <!-- /templates/index.html  -->
+
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <div class="site-container" style="overflow: auto; max-height: 80vh">
+            <div class="table-responsive">
+                <table class="table" id="site_infos_id">
+                    <thead>
+                        <tr>
+                            <th scope="col">Site Name</th>
+                            <th scope="col">Region</th>
+                            <th scope="col">Site Type</th>
+                            <th scope="col">Site Code</th>
+                            <th scope="col">Tac Name</th>
+                            <th scope="col">DT Readiness</th>
+                            <th scope="col">RFS</th>
+                            <th scope="col">RFS Date</th>
+                            <th scope="col">Huawei 1st Submission Date</th>
+                            <th scope="col">TE 1st Response Date</th>
+                            <th scope="col">Huawei 2nd Submission Date</th>
+                            <th scope="col">TE 2nd Response Date</th>
+                            <th scope="col">Huawei 3rd Submission Date</th>
+                            <th scope="col">TE 3rd Response Date</th>
+                            <th scope="col">Acceptance Date (Optimization)</th>
+                            <th scope="col">Acceptance Date (Planning)</th>
+                            <th scope="col">Signed Sites</th>
+                            <th scope="col">As Built Date</th>
+                            <th scope="col">As Built Status</th>
+                            <th scope="col">DT Status</th>
+                            <th scope="col">SHR Status</th>
+                            <th scope="col">DT Planned</th>
+                            <th scope="col">Integeration Status</th>
+                            <th scope="col">Comments/Snags</th>
+                            <th scope="col">Cluster Name</th>
+                            <th scope="col">Type(Standalone/colocated)</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Installed type (Standalone/colocated)</th>
+                            <th scope="col">Depature</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Pending</th>
+                            <th scope="col">Pending Status</th>
+                            <th scope="col">Problematic Details</th>
+                            <th scope="col">ETS TAC</th>
+                            <th scope="col">Region</th>
+                            <th scope="col">SF6 Signed Date</th>
+                            <th scope="col">SF6 Signed Comment</th>
+                            <th scope="col">Comment History</th>
+                            <th scope="col">On air Owner</th>
+                            <th scope="col">PP Owner</th>
+                            <th scope="col">Report Comment</th>
+                            <th scope="col">HU Optimization Area Owner</th>
+                            <th scope="col">Planning Owner</th>
+                            <th scope="col">PO Number</th>
+                            <th scope="col">Trigger date</th>
+                            <th scope="col">As built status</th>
+                            <th scope="col">R</th>
+                            <th scope="col">T</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for site_code in site_infos_id %}
+                        <tr id={{ site_code.id }}>
+                            <th scope="row">{{ site_code.site_name }}</th>
+                            <td> {{site_code.region }} </td>
+                            <td> {{ site_code.site_type }} </td>
+                            <td> {{ site_code.site_code }} </td>
+                            <td> {{ site_code.tac_name }} </td>
+                            <td> {{site_code.dt_readiness }} </td>
+                            <td> {{ site_code.rfs }} </td>
+                            <td> {{ site_code.rfs_date }} </td>
+                            <td> {{ site_code.hu_1st_sub_date }} </td>
+                            <td> {{site_code.te_1st_resp_date }} </td>
+                            <td> {{ site_code.hu_2nd_sub_date }} </td>
+                            <td> {{ site_code.te_2nd_resp_date }} </td>
+                            <td> {{ site_code.hu_3rd_sub_date }} </td>
+                            <td> {{site_code.te_3rd_resp_date }} </td>
+                            <td> {{ site_code.accpt_date_opt }} </td>
+                            <td> {{ site_code.accpt_date_plan }} </td>
+                            <td> {{ site_code.signed_sites }} </td>
+                            <td> {{site_code.as_built_date }} </td>
+                            <td> {{ site_code.as_build_status }} </td>
+                            <td> {{ site_code.dt_status }} </td>
+                            <td> {{ site_code.shr_status }} </td>
+                            <td> {{site_code.dt_planned }} </td>
+                            <td> {{ site_code.integeration_status }} </td>
+                            <td> {{ site_code.comnt_snags }} </td>
+                            <td> {{ site_code.cluster_name }} </td>
+                            <td> {{flight.type_stnd_alone_colcted }} </td>
+                            <td> {{ site_code.instled_type_stnd_alone_colcted }} </td>
+                            <td> {{ site_code.status }} </td>
+                            <td> {{ site_code.pending }} </td>
+                            <td> {{site_code.pending_status }} </td>
+                            <td> {{ site_code.problamatic_details }} </td>
+                            <td> {{ site_code.ets_tac }} </td>
+                            <td> {{ site_code.region_2 }} </td>
+                            <td> {{site_code.sf6_signed_date }} </td>
+                            <td> {{ site_code.sf6_signed_comnt }} </td>
+                            <td> {{ site_code.comment_history }} </td>
+                            <td> {{ site_code.on_air_owner }} </td>
+                            <td> {{site_code.pp_owner }} </td>
+                            <td> {{ site_code.report_comment }} </td>
+                            <td> {{ site_code.hu_opt_area_owner }} </td>
+                            <td> {{ site_code.planning_owner }} </td>
+                            <td> {{ site_code.po_number }} </td>
+                            <td> {{site_code.trigger_date }} </td>
+                            <td> {{ site_code.as_built_status2 }} </td>
+                            <td> {{ site_code.r }} </td>
+                            <td> {{ site_code.t }} </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endblock %}

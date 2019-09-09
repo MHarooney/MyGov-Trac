@@ -1,0 +1,229 @@
+<!-- /templates/update_flight.html  -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" id="target">
+    <div class="form-group">
+        <input type="text" class="form-control" name="site_name" value="{{ data.site_name }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="region" value="{{ data.region }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="site_type" value="{{ data.site_type }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="site_code" value="{{ data.site_code }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="tac_name" value="{{ data.tac_name }}">
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="dt_readiness"
+                value="{{ data.dt_readiness }}"
+        >
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="rfs" value="{{ data.rfs }}">
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="rfs_date"
+                value="{{ data.rfs_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="hu_1st_sub_dte"
+                value="{{ data.hu_1st_sub_dte }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="te_1st_resp_date"
+                value="{{ data.te_1st_resp_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="hu_2nd_sub_date"
+                value="{{ data.hu_2nd_sub_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="te_2nd_resp_date"
+                value="{{ data.te_2nd_resp_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="hu_3rd_sub_date"
+                value="{{ data.hu_3rd_sub_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="te_3rd_resp_date"
+                value="{{ data.te_3rd_resp_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="te_3rd_resp_date"
+                value="{{ data.te_3rd_resp_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="acpt_date_opt"
+                value="{{ data.acpt_date_opt }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="acpt_date_plan"
+                value="{{ data.acpt_date_plan }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="signed_sites"
+                value="{{ data.signed_sites }}"
+        >
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="as_built_date"
+                value="{{ data.as_built_date }}"
+        >
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="as_built_status" value="{{ data.as_built_status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="dt_status" value="{{ data.dt_status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="shr_status" value="{{ data.shr_status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="dt_planned" value="{{ data.dt_planned }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="integration_status" value="{{ data.integration_status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="comnt_snags" value="{{ data.comnt_snags }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="cluster_name" value="{{ data.cluster_name }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="cluster_name" value="{{ data.cluster_name }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="type_stnd_alone_colcted"
+               value="{{ data.type_stnd_alone_colcted }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="status" value="{{ data.status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="pending" value="{{ data.pending }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="pending_status" value="{{ data.pending_status }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="problematic_details" value="{{ data.problematic_details }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="ets_tac" value="{{ data.ets_tac }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="ets_tac" value="{{ data.ets_tac }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="region_2" value="{{ data.region_2 }}">
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="sf6_signed_dte"
+                value="{{ data.sf6_signed_dte }}"
+        >
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="sf6_signed_comnt" value="{{ data.sf6_signed_comnt }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="comnt_history" value="{{ data.comnt_history }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="on_air_owner" value="{{ data.on_air_owner }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="pp_owner" value="{{ data.pp_owner }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="rprt_comnt" value="{{ data.rprt_comnt }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="hu_opt_area_owner" value="{{ data.hu_opt_area_owner }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="planning_owner" value="{{ data.planning_owner }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="po_number" value="{{ data.po_number }}">
+    </div>
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control datetime"
+                name="tigger_dte"
+                value="{{ data.tigger_dte }}"
+        >
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="as_built_status2" value="{{ data.as_built_status2 }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="r" value="{{ data.r }}">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="t" value="{{ data.t }}">
+    </div>
+    <button type="submit" class="btn btn-block btn-primary">Update</button>
+</form>
+{% endblock %}
